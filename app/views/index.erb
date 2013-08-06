@@ -1,0 +1,16 @@
+<div class="container">
+  <h1> WELCOME TO ANAGRAMS!!!!!!?! </h1>
+   <% if @query  %>
+     <ol id='answer'>
+      <% @query.each do |word| %>
+        <li class='word'><%= word %></li>
+      <% end %>
+    </ol>
+   <% end %> 
+  
+  <form action="/query" method="post">
+    <input type="text" name="query" placeholder="Enter a word...">
+    <input type="button" value="Submit">
+  </form>
+</div>
+
